@@ -27,3 +27,8 @@ Route::prefix('/app')->group(function(){
 });
 
 
+Route::fallback(function() {
+    echo 'Pagina inexistente. <a href="/">Clique aqui<a> para ir para a home';
+});
+
+
