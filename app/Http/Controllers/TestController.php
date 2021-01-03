@@ -10,7 +10,12 @@ class TestController extends Controller
         return "<h1>Teste nessa porra</h1>";
     }
 
-    public function passagemParametro(int $p1, int $p2) {
-        echo "a soma dos parametros $p1 + $p2  é: ". ($p1 + $p2);
+    public function passagemParametro($p1, $p2) {
+        //echo "a soma dos parametros $p1 + $p2  é: ". ($p1 + $p2);
+        // return view("site.teste", [
+        //     'p1' => $p1,
+        //     'p2' => $p2
+        // ]);
+        return view("site.teste", compact('p1', 'p2')); 
     }
 }
