@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
+//use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +19,7 @@ Route::get('/sobrenos', 'SobreNosController@sobreNos');
 Route::get('/contato', 'ContatoController@contato');
 Route::get('/vaicaralho', 'TestController@vaicaralho');
 Route::get('/login', function(){return 'login';});
+Route::get('/teste/{p1}/{p2}', 'TestController@passagemParametro')->name('teste');
 
 Route::prefix('/app')->group(function(){
     Route::get('/clientes', function(){return 'clientes';});
