@@ -27,6 +27,11 @@ class AlterFornecedoresNovasColunas extends Migration
      */
     public function down()
     {
-        //
+        // para executar o metodo down utilizar o migrate:rollback
+        Schema::table('fornecedores', function (Blueprint $table) {
+            $table->dropColumn([
+                'uf','email'
+            ]);
+        });
     }
 }
